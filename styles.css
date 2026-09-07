@@ -178,7 +178,8 @@ h1 span { color: var(--orange); }
 .cta img { position: absolute; z-index: 2; left: 45px; bottom: -8px; width: 176px; }
 .cta .eyebrow { color: #ffe8d5; }
 .cta p:not(.eyebrow) { margin: 18px 0 28px; color: #fff3e8; }
-.cta .appstore { margin: 0 auto; }
+/* The CTA is centre-aligned, unlike the hero where the same stack is left-aligned. */
+.cta-actions { align-items: center; margin: 0 auto; }
 .site-footer { margin-top: 90px; padding: 40px max(22px, calc((100vw - 1160px) / 2)); border-top: 1px solid var(--line); background: #fff; }
 .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
 .footer-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; }
