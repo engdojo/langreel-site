@@ -144,12 +144,13 @@ h1 span { color: var(--orange); }
 .feature-list h3 { margin: 3px 0 8px; font-size: 16px; }
 .feature-list p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
 .inside { text-align: center; }
-.screens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; align-items: center; max-width: 920px; margin: 0 auto; }
+/* Columns follow the number of figures. A fixed repeat(3) left an empty third column
+   the moment one was removed, which reads as a missing image rather than a choice. */
+.screens { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 40px; align-items: center; max-width: 920px; margin: 0 auto; }
 .screens figure { margin: 0; }
 .screens-main { transform: translateY(-18px); }
 .screen-phone { width: min(100%, 260px); aspect-ratio: 427 / 788; margin: 0 auto; padding: 7px; border-radius: 34px; }
 .screen-phone > img { width: 100%; height: 100%; border-radius: 27px; object-fit: cover; object-position: center; }
-.screens figure:first-child .screen-phone > img { object-fit: cover; object-position: center; }
 .screens figcaption { display: flex; flex-direction: column; gap: 5px; margin-top: 20px; }
 .screens figcaption strong { font-size: 16px; }
 .screens figcaption span { color: var(--muted); font-size: 12px; }
